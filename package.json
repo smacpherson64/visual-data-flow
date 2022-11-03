@@ -4,10 +4,12 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
+  "homepage": "https://smacpherson64.github.io/visual-data-flow",
   "dependencies": {
     "@headlessui/react": "1.4.0",
     "@types/react": "17.0.19",
     "@types/react-dom": "17.0.9",
+    "gh-pages": "^4.0.0",
     "ramda": "0.27.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -20,7 +22,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && mv ./build ./docs",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
